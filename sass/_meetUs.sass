@@ -1,0 +1,55 @@
+@use 'variables' as *
+@use 'mixin' as mix
+.meetUs
+    width: 80vw
+    // height: 100vh
+    margin: 1rem auto
+    &__title 
+        text-align: center
+        font-size: $font-title
+        padding: 1.5rem
+        margin: 1rem
+    &__cards
+        height: 100%
+        display: grid
+        column-gap: 1.5rem
+        grid-template-columns: repeat(auto-fit,minmax(22rem,1fr))
+        place-items: center
+    &__item
+        width: 220px
+        height: 500px
+        @include mix.center
+        flex-direction: column
+    &__item__title 
+        text-align: center
+        font-size: 2.4rem
+    &__img
+        height: 75%
+        border: solid 4px #f2f2f2
+        transition: all 1s ease-in-out
+    &__img:hover
+        transform: scale(1.03) 
+        transition: all 1s ease-in-out
+    &__item__info
+        width: 100%
+        height: 30%
+
+    &__container__paragraph
+    &__paragraph
+        font-size: 1.5rem
+        text-align: center
+
+summary
+    cursor: pointer
+    // font-size: 3rem
+    text-align: center
+    list-style: none
+    display: flex
+    align-items: baseline
+    justify-content: space-between
+    
+summary::after
+    content: url(/img/flecha.png)
+    transition: all .3s ease
+details[open] > summary::after
+    transform: rotate(90deg)

@@ -1,0 +1,37 @@
+@use 'mixin' as mix
+.header
+    @include mix.between
+    align-items: stretch
+    @include mix.size(100vw,auto)
+    background: #fff
+.logo
+    font-size: 5.3rem
+    font-weight: 200
+    @include mix.center
+    color: #000
+    text-transform: uppercase
+    letter-spacing: .4rem
+    padding: 1rem
+    // margin-left: 2rem
+    // font-family: 'Space Mono', monospace
+.nav
+    margin-right: .5rem
+    &__menu
+        font-size: 6rem
+        display: flex
+        letter-spacing: .1rem
+    &__items
+        list-style: none
+        padding: 1rem
+        margin-bottom: .5rem
+    &__links
+        color: #000
+        text-decoration: none
+    &__links:hover
+        color: #0071E3
+.burger
+    visibility: hidden 
+    cursor: pointer
+    // &__container
+    //     background: #000
+    //     position: relative

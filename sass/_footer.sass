@@ -1,0 +1,47 @@
+@use 'mixin' as mix 
+@use 'variables' as *
+
+.footer
+    width: 100%
+    position: absolute
+    background: #000
+    display: felx
+    flex-direction: column
+    &__container
+        display: flex
+        justify-content: center
+    &__menu
+        margin: 1rem auto
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        // display: grid 
+        // grid-auto-rows: 100px
+        // grid-template-columns: repeat(auto-fit,minmax(20rem,1fr))
+        // gap: 2rem
+        // padding-top: 1.2rem 
+        list-style: none
+        // margin-bottom: 2rem
+        
+    &__items
+        display: flex
+        align-items: center
+    &__icon
+        width: 5rem
+    &__links
+        text-decoration: none
+    &__links__container
+        color: #fff
+        font-size: 1.9rem
+        display: flex
+        align-items: center 
+    &__links__container:hover
+        color: #0071E3
+    &__logo__container
+        margin-top: 2rem
+    &__logo
+        text-align: center
+        font-size: 2rem
+        color: #fff
+        font-weight: 200
+        letter-spacing: 0.5em

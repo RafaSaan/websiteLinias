@@ -1,0 +1,23 @@
+@use 'mixin' as mix
+.banner
+    background: #000
+    width: 100vw
+    @include mix.center
+    border-bottom: solid 1px #fff
+    &__container
+        @include mix.center
+        height: 89.3vh
+        width: 90vw
+.ml12 
+    font-weight: 200
+    font-size: 4.2rem
+    letter-spacing: 0.5em
+    color: #fff
+    display: inline
+    height: auto
+    
+
+
+.ml12 .letter 
+    // display: inline
+    line-height: 1em
